@@ -1,0 +1,27 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore logs
+*.log
+*.txt
+/build/
+/dist/
+
+# Ignore OS-specific files (e.g., macOS Finder files, Windows Thumbs.db)
+.DS_Store
+Thumbs.db
+
+# Ignore environment variable files
+.env
+
+# Ignore test coverage files
+coverage/
+
+# Ignore IDE and editor settings
+.idea/
+.vscode/
+*.iml
+
+# Ignore all files in temp directories, but keep .gitkeep
+temp/*
+!temp/.gitkeep
