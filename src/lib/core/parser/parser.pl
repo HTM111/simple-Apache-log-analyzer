@@ -4,7 +4,7 @@ use warnings;
 #temporally values
 my @uniqueIpAdresses = ();
 my %seen ;
-# regex ba
+
 my $IP_ADRESS = qr/((?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|-)/;
 my $DATE_REGEX = qr/\[((?:3[0-2]|[0-2][0-9])\/(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\/[1-2][0-9][0-9][0-9]:(?:2[0-4]|[10][0-9]):[0-5][0-9]:[0-5][0-9]\s[-+][0-9]{4})\]/;
 my $URL_REGEX = qr/"((?:GET|POST|PUT|PATCH|DELETE|OPTIONS)\s+[^ ]+[[:space:]]HTTP\/(?:1\.[0-9]|2))"/;
@@ -53,10 +53,12 @@ sub openFile{
     close($filehandler);
 }
 sub DashboardPrint{
+    print "======================================================\n";
     print "[+] Total request are : $totalRequests\n";
     print "[+] Total unique visitors are : $totalUniqueVistors\n";
     print "[+] Total Failed request are : $totalFailedRequest\n";
-    print "[+] Total Successfull request are : $totalSuccessfullRequest\n"
+    print "[+] Total Successfull request are : $totalSuccessfullRequest\n";
+    print "==========================================================\n"
 
 }
 openFile(@ARGV);
